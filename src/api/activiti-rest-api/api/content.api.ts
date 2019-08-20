@@ -306,6 +306,7 @@ export class ContentApi extends BaseApi {
         let accepts = ['application/json', '*/*'];
 
         if (renditionType) {
+            pathParams['renditionType'] = renditionType;
             return this.apiClient.callApi(
                 '/api/enterprise/content/{contentId}/rendition/{renditionType}', 'GET',
                 pathParams, queryParams, headerParams, formParams, postBody,
